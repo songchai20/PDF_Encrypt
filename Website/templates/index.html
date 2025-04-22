@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>PDF Encryptor</title>
+    <style>
+        body { font-family: sans-serif; max-width: 600px; margin: 40px auto; }
+        input, button { padding: 10px; margin: 10px 0; width: 100%; }
+        .error { color: red; }
+    </style>
+</head>
+<body>
+    <h2>🔐 PDF Encryptor</h2>
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        {% for category, message in messages %}
+          <p class="{{ category }}">{{ message }}</p>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+
+    <form method="POST" enctype="multipart/form-data">
+        <label>อัปโหลดไฟล์ PDF:</label>
+        <input type="file" name="pdf_file" accept=".pdf" required>
+
+        <label>รหัสผ่าน:</label>
+        <input type="password" name="password" required>
+
+        <button type="submit">Encrypt PDF</button>
+    </form>
+</body>
+</html>

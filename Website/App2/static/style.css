@@ -1,0 +1,29 @@
+body {
+    font-family: sans-serif;
+    max-width: 600px;
+    margin: 40px auto;
+  }
+  
+  input, button {
+    padding: 10px;
+    margin: 10px 0;
+    width: 100%;
+  }
+  
+  .drop-zone {
+    border: 2px dashed #aaa;
+    padding: 40px;
+    text-align: center;
+    margin: 10px 0;
+    cursor: pointer;
+  }
+  
+  .drag-over {
+    border-color: #007bff;
+    background-color: #f0f8ff;
+  }
+  
+  .error {
+    color: red;
+  }
+  
